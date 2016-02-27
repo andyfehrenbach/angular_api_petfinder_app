@@ -2,15 +2,13 @@
 <html lang="en">
 
 <head>
-  <title>Angular Route Solo</title>
+  <title>Angular-API-Petfinder_APP</title>
   <link href="//fonts.googleapis.com/css?family=Droid+Serif:700,700italic" rel="stylesheet" type="text/css">
 
   <script type="text/javascript" src="/vendors/angular.min.js"></script>
   <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
   <script type="text/javascript" src="/scripts/app.js"></script>
-  <script type="text/javascript" src="/scripts/controllers/dog-controller.js"></script>
-  <script type="text/javascript" src="/scripts/controllers/cat-controller.js"></script>
-  <script type="text/javascript" src="/scripts/controllers/rabbit-controller.js"></script>
+  <script type="text/javascript" src="/scripts/controllers/get_animal_controller.js"></script>
 
   <link rel="stylesheet" href="/styles/normalize.css" />
   <link rel="stylesheet" href="/styles/skeleton.css" />
@@ -18,19 +16,13 @@
 </head>
 
 <body ng-app="myApp">
+  <div>
+    <header ng-include="'/templates/header.html'"></header>
 
-
-  <header ng-include="'/templates/header.html'"></header>
-
-
-  <div class="dog">
-    <main ng-view>
-      <div>
-
-      </div>
-    </main>
   </div>
+  <main ng-view>
 
+  </main>
   <footer ng-include=" '/templates/footer.html' "></footer>
 
 </body>

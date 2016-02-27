@@ -3,6 +3,11 @@ body {
   font-style: italic;
   font-weight: 400;
 }
+
+.margin-bottom {
+  margin-bottom: 4em;
+}
+
 nav {
   background: tomato;
   text-transform: uppercase;
@@ -31,6 +36,14 @@ nav ul {
 .five.columns.logo {
       margin-top: -1.3em;
 }
+
+button.button-primary {
+  background-color: #fff;
+  color: #222;
+  margin: 0 2em;
+}
+
+
 nav li a {
   text-decoration: none;
   color: #fff;
