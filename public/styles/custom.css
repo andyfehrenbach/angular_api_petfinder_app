@@ -7,7 +7,9 @@ body {
 .margin-bottom {
   margin-bottom: 4em;
 }
-
+ /*div {
+   border: 1px solid #000;
+ }*/
 nav {
   background: tomato;
   text-transform: uppercase;
@@ -54,22 +56,44 @@ nav li a {
   letter-spacing: 2px;
   margin: 0 2rem;
 }
+
 h4 {
   display: inline;
 }
+
 main {
   /*height: 88vh;*/
 }
+
 a:hover {
   color: #222;
 }
+
+.pet-name {
+  margin-top: -1em;
+    display: inline-block;
+    background: #fff;
+    padding: 0 .5em;
+}
+
+.listing{
+  border-bottom: 4px solid #222;
+}
+
+.desc{
+  margin: -0.5em 0 2em 4%;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
 .foot {
   margin: 0em .5em;
   color: grey;
   height: 5vh;
 }
 .logo a {
-  padding-left: 2em;
   text-transform: lowercase;
   font-weight: 700;
   font-style: italic;
@@ -77,14 +101,23 @@ a:hover {
   font-size: 34px;
   line-height: 2.4em;
 }
+
 .frame {
   width: 100%;
   height: 100%;
   z-index: .25;
+  margin: 0 0 0 4%;
 }
 .frame img {
   width: 100%;
   overflow: hidden;
+}
+
+button.favorite {
+  width: 100%;
+  font-size: 150%;
+  margin: 0;
+  padding: 0;
 }
 .five.columns {
   margin-top: -2em;
@@ -102,7 +135,6 @@ h5 {
   font-size: 1.6em;
   letter-spacing: -.02rem;
   font-style: normal;
-  padding-top: 61px;
   line-height: 1.4;
 }
 h5::first-line {

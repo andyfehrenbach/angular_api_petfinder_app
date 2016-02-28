@@ -1,19 +1,37 @@
 myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $http) {
-
     console.log('the controller is working');
+
     $scope.data = {};
-    $scope.animal = 'horse';
-    console.log($scope.animal);
+    $scope.search = false;
+        $scope.animalName = '';
+
+  $scope.animalSearch = function() {
+    // check option value
+    if($scope.animal != '') {
+        // valid selection, do something
+        $scope.search = true;
+    } else {
+      // invalid, reset bool
+      $scope.search = false;
+    }
+    console.log($scope.search);
+
+  };
 
 
-    function getAnimal() {
+    $scope.getAnimal = function() {
+
+
         // API key
+        console.log('function firing');
+        console.log($scope.animalName);
+
         var key = 'aeae1463b9ce72e46a418089c2b8c21f';
 
         var baseURL = 'http://api.petfinder.com/';
         var query = 'pet.getRandom';
         query += '?key=' + key;
-        query += '&animal='+ $scope.animal;
+        query += '&animal='+ $scope.animalName;
         query += '&output=basic';
         query += '&format=json';
 
@@ -22,11 +40,11 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
 
         $http.jsonp(request).then(
             function(response) {
-                $scope.animal = response.data.petfinder.pet;
-                console.log($scope.animal);
+                $scope.animalRetrieved = response.data.petfinder.pet;
+                console.log($scope.animalRetrieved);
             }
         );
-    }
+    };
 
-    getAnimal();
+    // getAnimal();
 }]);

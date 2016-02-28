@@ -6,8 +6,6 @@ myApp.config(['$routeProvider', function($routeProvider) {
 
         .when('/home', {
             templateUrl: '/views/templates/home.html',
-            controller: 'getAnimalController'
-
         })
 
         .when('/favorites', {
@@ -15,7 +13,8 @@ myApp.config(['$routeProvider', function($routeProvider) {
         })
 
         .when('/results', {
-            templateUrl: '/views/templates/results.html'
+            templateUrl: '/views/templates/results.html',
+            // controller: 'favorites'
         })
 
         .otherwise({

@@ -1,6 +1,6 @@
 myApp.factory('DataFactory', ['$http', function($http) {
     // PRIVATE
-    var animal == undefined;
+    var animal = undefined;
 
     var getData = function() {
         console.log('getting data from server');
