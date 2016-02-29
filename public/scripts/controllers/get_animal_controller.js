@@ -68,14 +68,14 @@ myApp.controller('getAnimalController', ['$scope', '$http', 'DataFactory', funct
     };
 
 //////
-    $scope.showFavorites = function () {
-        var dataFactory = DataFactory;
+    // $scope.showFavorites = function () {
+    //     var dataFactory = DataFactory;
+    //
+    //     dataFactory.retrieveFavorites();
+    //
+    //     };
 
-        dataFactory.retrieveFavorites();
 
-        };
-
-  
 }]);
 
 

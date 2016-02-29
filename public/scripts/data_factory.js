@@ -2,6 +2,7 @@ myApp.factory('DataFactory', ['$http', function($http) {
     // PRIVATE
     var favoriteAnimals = undefined;
 
+
     // var getData = function() {
     //     console.log('getting data from server');
     //     var promise = $http.get('/data').then(function(response) {

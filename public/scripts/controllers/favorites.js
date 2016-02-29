@@ -3,14 +3,20 @@ myApp.controller('FavoritesController', ['$scope', '$http', 'DataFactory', funct
   $scope.favoriteAnimals = [];
   $scope.dataFactory = DataFactory;
 
-  if($scope.dataFactory.favoriteAnimalData() === undefined) {
+  // if($scope.dataFactory.favoriteAnimalData() === undefined) {
           // initial load
           $scope.dataFactory.retrieveFavorites().then(function() {
               $scope.favoriteAnimals = $scope.dataFactory.favoriteAnimalData();
+              $scope.favoriteCount = $scope.favoriteAnimals.length;
+
+                  console.log('undefined: animalcount = ', $scope.favoriteCount);
+
           });
-      } else {
-          $scope.favoriteAnimals = $scope.dataFactory.favoriteAnimalData();
-      }
+      // } else {
+      //     $scope.favoriteAnimals = $scope.dataFactory.favoriteAnimalData();
+      //     $scope.favoriteCount = $scope.favoriteAnimals.length;
+      //     console.log('defined: animalcount = ', $scope.favoriteCount);
+      // }
 
   $scope.addFavorite = function() {
     ///addd to favorites function will eventually go here
