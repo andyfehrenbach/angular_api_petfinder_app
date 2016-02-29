@@ -1,3 +1,7 @@
+/*div {
+  border: 1px solid #000;
+}*/
+
 body {
   font-family: 'droid serif', 'georgia', serif;
   font-style: italic;
@@ -10,9 +14,7 @@ a {
 .margin-bottom {
   margin-bottom: 4em;
 }
- /*div {
-   border: 1px solid #000;
- }*/
+
 nav {
   background: #33C3F0;
   text-transform: uppercase;
@@ -114,6 +116,7 @@ a:hover {
 .frame img {
   width: 100%;
   overflow: hidden;
+      margin-bottom: 2em;
 }
 
 button.favorite {
@@ -152,4 +155,10 @@ hr {
 .content {
   margin-top: 1em;
   background: #fff;
+}
+
+/*styling the favorites pane*/
+
+.favorite-listing {
+  margin-bottom: 5em;
 }
