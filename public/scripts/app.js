@@ -9,7 +9,7 @@ myApp.config(['$routeProvider', function($routeProvider) {
 
         .when('/favorites', {
             templateUrl: '/views/templates/favorites.html',
-            // controller: 'favorites'
+            controller: 'FavoritesController'
         })
 
         .when('/results', {

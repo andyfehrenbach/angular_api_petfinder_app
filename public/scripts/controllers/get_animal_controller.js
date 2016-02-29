@@ -1,4 +1,4 @@
-myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $http) {
+myApp.controller('getAnimalController', ['$scope', '$http', 'DataFactory', function($scope, $http, DataFactory) {
     console.log('the controller is working');
 
     $scope.data = {};
@@ -69,17 +69,13 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
 
 //////
     $scope.showFavorites = function () {
-        console.log('the favorites controller is working');
-        // $scope.favoriteAnimals = [];
-        $http.get('/favorites').then(function(response){
-            $scope.favoriteAnimals = response.data;
-            console.log($scope.favoriteAnimals);
-            // console.log('Async data response:', animal);
-            // $scope.favoriteAnimals.push(animal);
-            // console.log($scope.favoriteAnimals);
-        });
+        var dataFactory = DataFactory;
 
-    };
+        dataFactory.retrieveFavorites();
+
+        };
+
+  
 }]);
 
 

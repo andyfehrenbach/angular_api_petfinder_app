@@ -7,8 +7,11 @@
 
   <script type="text/javascript" src="/vendors/angular.js"></script>
   <script type="text/javascript" src="/vendors/angular-route.min.js"></script>
+
   <script type="text/javascript" src="/scripts/app.js"></script>
+      <script type="text/javascript" src="/scripts/data_factory.js"></script>
   <script type="text/javascript" src="/scripts/controllers/get_animal_controller.js"></script>
+    <script type="text/javascript" src="/scripts/controllers/favorites.js"></script>
 
   <link rel="stylesheet" href="/styles/normalize.css" />
   <link rel="stylesheet" href="/styles/skeleton.css" />
@@ -17,36 +20,39 @@
 
 <body ng-app="myApp" ng-controller="getAnimalController">
 
-    <header >
-      <div class="row margin-bottom">
-        <nav class="twelve columns">
-          <ul class="twelve columns u-pull-right">
-            <li class="five columns logo"><a href="#home">Pet Finder</a></li>
-              <select name="animals" ng-init="animalName='default'" ng-model="animalName" ng-change="animalSearch()">
-                <option value="default" disabled> choose a pet </option>
-                <option value="dog"> dog </option>
-                <option value="cat"> cat </option>
-                <option value="bird"> bird </option>
-                <option value="horse"> horse </option>
-                <option value="pig"> pig </option>
-                <option value="barnyard"> barnyard </option>
-                <option value="reptile"> reptile </option>
-                <option value="smallfurry"> smallfurry </option>
-              </select>
-              <button  type="submit" id="go" class="button-primary" ng-click="getAnimal()"><a href="#results">Go</a></button>
-              <button id="fav" class="button-primary" ng-click="showFavorites()"><a href="#favorites">See Favorites</a></button>
-              <!-- <button id="home" class="button-primary"><a href="#home">Home</a></button> -->
-          </ul>
-        </nav>
-      </div>
+  <header>
+    <div class="row margin-bottom">
+      <nav class="twelve columns">
+        <ul class="twelve columns u-pull-right">
+          <li class="five columns logo"><a href="#home">Pet Finder</a></li>
+          <select name="animals" ng-init="animalName='default'" ng-model="animalName" ng-change="animalSearch()">
+            <option value="default" disabled> choose a pet </option>
+            <option value="dog"> dog </option>
+            <option value="cat"> cat </option>
+            <option value="bird"> bird </option>
+            <option value="horse"> horse </option>
+            <option value="pig"> pig </option>
+            <option value="barnyard"> barnyard </option>
+            <option value="reptile"> reptile </option>
+            <option value="smallfurry"> smallfurry </option>
+          </select>
+          <button type="submit" id="go" class="button-primary" ng-click="getAnimal()"><a href="#results">Go</a></button>
+          <button id="fav" class="button-primary" ng-click="showFavorites()"><a href="#favorites">See Favorites</a></button>
+          <!-- <button id="home" class="button-primary"><a href="#home">Home</a></button> -->
+        </ul>
+      </nav>
+    </div>
 
-    </header>
+  </header>
 
 
   <main ng-view>
 
   </main>
-  <footer ng-include=" '/templates/footer.html' "></footer>
+
+  <footer>
+    <p class="foot">&copy Andy Fehrenbach</p>
+  </footer>
 
 </body>
 
