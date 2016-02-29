@@ -46,5 +46,10 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
         );
     };
 
+    $scope.addFavorite = function() {
+      console.log('favorite function firing');
+
+    };
+
     // getAnimal();
 }]);
