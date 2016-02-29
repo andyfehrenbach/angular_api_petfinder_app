@@ -18,13 +18,15 @@ a {
 }
 
 nav {
-  background: #33C3F0;
+  background: #F08E33;
   text-transform: uppercase;
   font-weight: bold;
   height: 10vh;
   max-height: 60px;
   position: fixed;
   padding-top: 0.7%;
+
+
 }
 nav li {
   display: block;
@@ -51,11 +53,12 @@ button.button-primary {
   color: #222;
   margin: 0 2em;
   transition: all .1s;
+  border-color: #F08E33;
 }
 
 button.button-primary:hover {
-  background-color: #BEEFFE;
-  border-color: #BEEFFE;
+  background-color: #b16824;
+  border-color: #b16824;
 }
 
 
@@ -174,6 +177,25 @@ hr {
 }
 
 .number {
-  color: #33C3F0;
+  color: #F08E33;
   font-size: 125%;
 }
+
+/*styling the home page*/
+
+.jumbotron {
+  background: url("/images/dog.jpg"), no-repeat center center;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron h1 {
+  color: #fff;
+    opacity: .9;
+    font-size: 12vh;
+    border-bottom: 1.2vh solid #fff;
+    padding: 1vh 4vh;
+  }
