@@ -1,3 +1,5 @@
+/*main orange: #F08E33;    */
+/*hover orange: #FDAA44;   */
 /*div {
   border: 1px solid #000;
 }*/
@@ -43,11 +45,24 @@ nav ul {
   /*line-height: 17px;*/
   letter-spacing: 1px;
 }
+ nav button {
+  /*float: right;*/
+}
 
 .five.columns.logo {
       margin-top: -1.3em;
 }
 
+select {
+  width: 16vh;
+}
+select:focus {
+  border:none;
+}
+
+option {
+  padding-left: 1em;
+}
 button.button-primary {
   background-color: #fff;
   color: #222;
@@ -57,8 +72,8 @@ button.button-primary {
 }
 
 button.button-primary:hover {
-  background-color: #b16824;
-  border-color: #b16824;
+  background-color: #FDAA44;
+  border-color: #FDAA44;
 }
 
 
@@ -86,10 +101,11 @@ a:hover {
 }
 
 .pet-name {
-  margin-top: -1em;
+  margin-top: -1.2em;
     display: inline-block;
     background: #fff;
     padding: 0 .5em;
+    margin-left: 3vh;
 }
 
 .listing{
@@ -104,12 +120,7 @@ a:hover {
   overflow: auto;
 }
 
-.foot {
-  margin: .5em .5em;
-  color: grey;
-  height: 5vh;
-  font-size: 150%;
-}
+
 .logo a {
   text-transform: lowercase;
   font-weight: 700;
@@ -128,15 +139,21 @@ a:hover {
 .frame img {
   width: 100%;
   overflow: hidden;
-      margin-bottom: 2em;
+      margin-bottom: 4em;
 }
 
 button.favorite {
   width: 100%;
+  height: 100%;
   font-size: 150%;
   margin: 0 0 2em 0;
-  padding: 0;
+  padding: 2px 5px;
+  border: 3px solid #FDAA44;
+  transition: all .1s;
+}
 
+button.favorite:hover {
+  background-color: #FDAA44;
 }
 .five.columns {
   margin-top: -2em;
@@ -198,4 +215,18 @@ hr {
     font-size: 12vh;
     border-bottom: 1.2vh solid #fff;
     padding: 1vh 4vh;
+    text-shadow: -1vh 0.8vh 5vh #000;
+  }
+  footer {
+    background: #111;
+    color: #eee;
+    padding: .5em 0 0 1em;
+    height: 5vh;
+    /*font-size:%;*/
+    font-family: 'georgia', serif;
+    position: relative;
+  }
+
+  p.foot {
+    margin: 0;
   }

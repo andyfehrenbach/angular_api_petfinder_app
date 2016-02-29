@@ -4,6 +4,9 @@ myApp.controller('getAnimalController', ['$scope', '$http', 'DataFactory', funct
     $scope.data = {};
     $scope.search = false;
     $scope.animalName = '';
+    $scope.animalTypes = [
+      'dog', 'cat', 'bird', 'rabbit', 'horse', 'pig', 'barnyard', 'reptile', 'smallfurry'
+    ];
 
 
 ///handle the select form

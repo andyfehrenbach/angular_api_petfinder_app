@@ -25,17 +25,9 @@
       <nav class="twelve columns">
         <ul class="twelve columns u-pull-right">
           <li class="five columns logo"><a href="#home">Pet Finder</a></li>
-          <select name="animals" ng-init="animalName='default'" ng-model="animalName" ng-change="animalSearch()">
-            <option value="default" disabled> choose a pet </option>
-            <option value="dog"> dog </option>
-            <option value="cat"> cat </option>
-            <option value="bird"> bird </option>
-            <option value="horse"> horse </option>
-            <option value="pig"> pig </option>
-            <option value="barnyard"> barnyard </option>
-            <option value="reptile"> reptile </option>
-            <option value="smallfurry"> smallfurry </option>
-          </select>
+          <select ng-model="animalName" ng-options="animal for animal in animalTypes">
+              <option value="">Start Here</option>
+            </select>
           <button type="submit" id="go" class="button-primary" ng-click="getAnimal()"><a href="#results">Go</a></button>
           <button id="fav" class="button-primary" ng-click="showFavorites()"><a href="#favorites">See Favorites</a></button>
           <!-- <button id="home" class="button-primary"><a href="#home">Home</a></button> -->
@@ -50,9 +42,6 @@
 
   </main>
 
-  <footer>
-    <p class="foot">&copy Andy Fehrenbach</p>
-  </footer>
 
 </body>
 
