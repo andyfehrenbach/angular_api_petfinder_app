@@ -5,6 +5,9 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
     $scope.search = false;
         $scope.animalName = '';
 
+
+
+
   $scope.animalSearch = function() {
     // check option value
     if($scope.animal != '') {
@@ -13,6 +16,7 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
     } else {
       // invalid, reset bool
       $scope.search = false;
+      $scope.text = 'add to favorites';
     }
     console.log($scope.search);
 
@@ -47,7 +51,9 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
     };
 
     $scope.addFavorite = function() {
+
       console.log('favorite function firing');
+
 
     };
 
