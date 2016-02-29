@@ -1,1 +1,19 @@
-<h1>favorites page working</h1>
+<h1> favorites page loading</h1>
+<div class="row twelve columns content">
+  <hr />
+  <div class="favorite-listing" ng-repeat="for animal in favoriteAnimals">
+    <h2 class="pet-name">{{animal}}</h2>
+
+    <div class="row listing clearfix">
+      <div class="four columns frame">
+        <img ng-src="{{animal.pet_img_url}}" />
+        <button class="button-primary favorite" ng-click="addFavorite()">Add To Favorites</button>
+      </div>
+      <div class="eight columns desc">
+        <h5>{{animal.pet_desc}}</h5>
+      </div>
+    </div>
+  </div>
+
+
+</div>

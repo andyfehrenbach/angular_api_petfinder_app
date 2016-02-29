@@ -1,10 +1,13 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var displayFavorites = require('./routes/displayfavorites');
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use('/displayfavorites', displayFavorites);
 
 app.get('/data', function(req, res) {
     res.send({message: 'hello'});

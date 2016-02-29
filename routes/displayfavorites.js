@@ -5,6 +5,7 @@ var connect = require('../modules/pg_connect');
 
 
 router.get('/', function(req, res) {
+    console.log('get route working');
     var results = [];
 
     pg.connect(connect, function(err, client, done) {
