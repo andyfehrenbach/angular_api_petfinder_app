@@ -9,6 +9,8 @@ body {
 }
 a {
   color: #222;
+  text-decoration: none;
+  font-size: 1.4em;
 }
 
 .margin-bottom {
@@ -48,6 +50,12 @@ button.button-primary {
   background-color: #fff;
   color: #222;
   margin: 0 2em;
+  transition: all .1s;
+}
+
+button.button-primary:hover {
+  background-color: #BEEFFE;
+  border-color: #BEEFFE;
 }
 
 
@@ -94,9 +102,10 @@ a:hover {
 }
 
 .foot {
-  margin: 0em .5em;
+  margin: .5em .5em;
   color: grey;
   height: 5vh;
+  font-size: 150%;
 }
 .logo a {
   text-transform: lowercase;
@@ -122,8 +131,9 @@ a:hover {
 button.favorite {
   width: 100%;
   font-size: 150%;
-  margin: 0;
+  margin: 0 0 2em 0;
   padding: 0;
+
 }
 .five.columns {
   margin-top: -2em;
@@ -161,4 +171,9 @@ hr {
 
 .favorite-listing {
   margin-bottom: 5em;
+}
+
+.number {
+  color: #33C3F0;
+  font-size: 125%;
 }
