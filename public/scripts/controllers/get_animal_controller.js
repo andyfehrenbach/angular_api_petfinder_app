@@ -46,6 +46,8 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
         $http.jsonp(request).then(
             function(response) {
                 $scope.animalRetrieved = response.data.petfinder.pet;
+                //this line will add "favorited" poperty of FALSE
+                $scope.animalRetrieved.favorited = false;
                 console.log($scope.animalRetrieved);
             }
         );
@@ -54,6 +56,17 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
     $scope.addFavorite = function() {
 
       console.log('favorite function firing');
+      ///addd to favorites function will eventually go here
+      $scope.animalRetrieved.favorited = true;
+      console.log($scope.animalRetrieved);
+          //POST to server
+          $http.post('/favorites', $scope.animalRetrieved).then(function(response){
+              console.log ('data sent to server');
+              // console.log('Async data response:', animal);
+
+          });
+
+          //SERVER POST route will query the DB
 
 
     };
@@ -64,7 +77,7 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
     $scope.showFavorites = function () {
         // console.log('the favorites controller is working');
         $scope.favoriteAnimals = [];
-        $http.get('/displayfavorites').then(function(response){
+        $http.get('/favorites').then(function(response){
             var animal = response.data;
             // console.log('Async data response:', animal);
             $scope.favoriteAnimals.push(animal);
