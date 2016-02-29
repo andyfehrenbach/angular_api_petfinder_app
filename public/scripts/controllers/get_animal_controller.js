@@ -53,35 +53,30 @@ myApp.controller('getAnimalController', ['$scope', '$http', function($scope, $ht
         );
     };
 
-    $scope.addFavorite = function() {
+//////
 
-      console.log('favorite function firing');
+    $scope.addFavorite = function() {
       ///addd to favorites function will eventually go here
       $scope.animalRetrieved.favorited = true;
-      console.log($scope.animalRetrieved);
           //POST to server
           $http.post('/favorites', $scope.animalRetrieved).then(function(response){
               console.log ('data sent to server');
               // console.log('Async data response:', animal);
-
           });
 
           //SERVER POST route will query the DB
-
-
     };
 
-    // getAnimal();
-
-
+//////
     $scope.showFavorites = function () {
-        // console.log('the favorites controller is working');
-        $scope.favoriteAnimals = [];
+        console.log('the favorites controller is working');
+        // $scope.favoriteAnimals = [];
         $http.get('/favorites').then(function(response){
-            var animal = response.data;
-            // console.log('Async data response:', animal);
-            $scope.favoriteAnimals.push(animal);
+            $scope.favoriteAnimals = response.data;
             console.log($scope.favoriteAnimals);
+            // console.log('Async data response:', animal);
+            // $scope.favoriteAnimals.push(animal);
+            // console.log($scope.favoriteAnimals);
         });
 
     };
