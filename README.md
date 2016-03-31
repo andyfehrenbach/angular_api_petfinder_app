@@ -1,2 +1,2 @@
-# Angular Solo Routes
-An Angular application built on Skeleton to learn route switching.
+# Angular API Petfinder App
+This app ultilizes the Petfinder API and allows users to get a random pet, and add pets to a favorites collection.
